@@ -4,7 +4,74 @@
 <meta charset="UTF-8">
 <title>Team</title>
 <link rel="stylesheet" href="style.css">
+
+<style>
+
+/* ===== TEAM SECTION ===== */
+.member-section{
+    padding:80px 0;
+}
+
+.team-wrapper{
+    width:85%;
+    margin:0 auto;
+}
+
+.team-member{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    margin-bottom:70px;
+    padding:30px;
+    border-radius:20px;
+    background:#f8fafc;
+    box-shadow:0 8px 25px rgba(0,0,0,0.05);
+    transition:0.3s ease;
+}
+
+.team-member:hover{
+    transform:translateY(-5px);
+}
+
+/* Ảnh bên trái */
+.team-member img{
+    width:250px;
+    height:300px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Nội dung bên phải */
+.member-info{
+    flex:1;
+}
+
+.member-info h3{
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.member-info p{
+    line-height:1.8;
+    text-align:justify;
+}
+
+/* Responsive */
+@media(max-width:900px){
+    .team-member{
+        flex-direction:column;
+        text-align:center;
+    }
+    .team-member img{
+        width:80%;
+        height:auto;
+    }
+}
+
+</style>
 </head>
+
 <body>
 
 <nav class="navbar">
@@ -14,44 +81,59 @@
         <li><a href="about.html">GIỚI THIỆU</a></li>
         <li><a href="applications.html">ỨNG DỤNG</a></li>
         <li><a href="news.html">TIN TỨC</a></li>
-       <li class="nav-item dropdown">
-    <a href="team.html">TEAM</a>
-
-    <div class="dropdown-menu">
-        <div class="dropdown-wrapper">
-
-            <!-- CỘT TRÁI: ẢNH -->
-            <div class="dropdown-image"></div>
-
-            <!-- CỘT PHẢI: HEAD -->
-            <div class="dropdown-heads">
-                <h4>Trần Nguyễn Vũ Hoàng</h4>
-                <h4>Hà Trần Anh Khoa</h4>
-                <h4>Nguyễn Hoàng Gia Bảo</h4>
-                <h4>Huỳnh Gia Cường</h4>
-            </div>
-
-        </div>
-    </div>
-</li>
+        <li><a href="team.html" class="active">TEAM</a></li>
     </ul>
 </nav>
 
-<section class="section">
+<section class="section member-section">
     <h2 class="section-title">Thành viên <span>Team</span></h2>
-    <div class="card-container">
-        <div class="card">
-            <h3>Nguyễn Văn A</h3>
-            <p>Frontend Developer</p>
+
+    <div class="team-wrapper">
+
+        <!-- HOÀNG -->
+        <div class="team-member">
+            <img src="img/hoang.jpg.jpg" alt="Trần Nguyễn Vũ Hoàng">
+            <div class="member-info">
+                <h3>Trần Nguyễn Vũ Hoàng - Web Project Leader</h3>
+                <p>
+                Đảm nhiệm vai trò điều phối và quản lý toàn bộ quá trình thực hiện dự án website. Lên kế hoạch, phân công công việc và theo dõi tiến độ nhằm đảm bảo dự án hoàn thành đúng thời hạn. Là cầu nối giữa các bộ phận lập trình, thiết kế và nội dung để đảm bảo sự đồng bộ của sản phẩm. Chủ động xử lý vấn đề phát sinh và tối ưu quy trình làm việc nhóm. Định hướng chất lượng và hiệu quả tổng thể của dự án website.
+                </p>
+            </div>
         </div>
-        <div class="card">
-            <h3>Trần Thị B</h3>
-            <p>Content Researcher</p>
+
+        <!-- CƯỜNG -->
+        <div class="team-member">
+            <img src="img/cuong.jpg.jpg" alt="Huỳnh Gia Cường">
+            <div class="member-info">
+                <h3>Huỳnh Gia Cường - Web Developer</h3>
+                <p>
+                Lập trình và phát triển các trang web với giao diện thân thiện, tối ưu trải nghiệm người dùng trên nhiều thiết bị. Có khả năng sử dụng HTML, CSS, JavaScript và các framework phổ biến để xây dựng các chức năng website ổn định và hiệu quả. Chủ động tối ưu hiệu suất, sửa lỗi và cải tiến mã nguồn nhằm nâng cao chất lượng sản phẩm. Phối hợp tốt với các bộ phận liên quan để đảm bảo tiến độ và yêu cầu dự án. Luôn cập nhật công nghệ mới để nâng cao năng lực chuyên môn.
+                </p>
+            </div>
         </div>
-        <div class="card">
-            <h3>Lê Văn C</h3>
-            <p>System Designer</p>
+
+        <!-- BẢO -->
+        <div class="team-member">
+            <img src="img/bao.jpg.jpg" alt="Nguyễn Hoàng Gia Bảo">
+            <div class="member-info">
+                <h3>Nguyễn Hoàng Gia Bảo - Content Builder</h3>
+                <p>
+                Phụ trách xây dựng và phát triển nội dung cho website theo định hướng thương hiệu và mục tiêu dự án. Có khả năng viết nội dung rõ ràng, mạch lạc, tối ưu SEO và phù hợp với trải nghiệm người dùng. Phối hợp với bộ phận thiết kế và lập trình để đảm bảo nội dung hiển thị hiệu quả trên website. Chủ động nghiên cứu xu hướng và nhu cầu người dùng để cải thiện chất lượng nội dung. Đảm bảo tính nhất quán và chuyên nghiệp trong toàn bộ hệ thống nội dung.
+                </p>
+            </div>
         </div>
+
+        <!-- KHOA -->
+        <div class="team-member">
+            <img src="img/khoa.jpg.jpg" alt="Hà Trần Anh Khoa">
+            <div class="member-info">
+                <h3>Hà Trần Anh Khoa - Web Designer</h3>
+                <p>
+                Thiết kế giao diện website hiện đại, trực quan và phù hợp với định hướng thương hiệu. Có khả năng xây dựng layout logic, tối ưu trải nghiệm người dùng (UI/UX) và đảm bảo tính thẩm mỹ. Sử dụng các công cụ thiết kế phổ biến để tạo mockup và prototype cho website. Phối hợp chặt chẽ với lập trình viên để chuyển đổi thiết kế thành sản phẩm hoàn chỉnh. Luôn chú trọng đến tính khả dụng và khả năng mở rộng của giao diện.
+                </p>
+            </div>
+        </div>
+
     </div>
 </section>
 
